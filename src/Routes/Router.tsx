@@ -1,4 +1,4 @@
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Routes, BrowserRouter, Route, Navigate } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 import AppRoutes from "./AppRoutes";
 import { Dashboard } from "@/layout/DashboardLayout";
@@ -11,6 +11,7 @@ const Router = () => {
           <Route path="/admin/*" element={<PrivateRoutes />} />
         </Route>
         <Route path="/*" element={<AppRoutes />} />
+        <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
   );

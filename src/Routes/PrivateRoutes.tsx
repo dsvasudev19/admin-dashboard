@@ -1,6 +1,6 @@
 import OrdersPage from "@/pages/Orders/OrdersPage";
 import ProductsPage from "@/pages/Products/ProductsPage";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 const PrivateRoutes = () => {
   return (

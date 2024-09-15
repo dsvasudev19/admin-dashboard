@@ -8,16 +8,15 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {Link} from 'react-router-dom'
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import toast from 'react-hot-toast'
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import { Input } from "@/components/ui/input";
 
 export default function TFA() {
     const [otp,setOtp]=useState("")
 
     const handleSubmit = (e: any) => {
-      
+      e.preventDefault();
     };
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
@@ -83,7 +82,7 @@ function MountainIcon(props:any) {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      className="lucide lucide-lock-keyhole"
+      className={`lucide lucide-lock-keyhole ${props.className}`}
     >
       <circle cx="12" cy="16" r="1" />
       <rect x="3" y="10" width="18" height="12" rx="2" />

@@ -1,4 +1,3 @@
-import React from "react";
 
 import { Badge } from "@/components/ui/badge";
 
@@ -23,8 +22,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Field, Form, Formik } from "formik";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectValue } from "@/components/ui/select";
-import { SelectTrigger } from "@radix-ui/react-select";
+
 
 const ProductsListing = () => {
   return (
@@ -110,7 +108,7 @@ const ProductsListing = () => {
             </CardHeader>
             <CardContent className="space-y-2">
               <Formik initialValues={{}} onSubmit={() => {}}>
-                {({ setFieldValue }) => (
+                {({ }) => (
                   <Form>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="grid gap-2">
