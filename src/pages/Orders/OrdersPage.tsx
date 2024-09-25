@@ -9,7 +9,7 @@ const OrdersPage = () => {
 
       <Route
         path="/"
-        element={<Navigate to="/admin/orders/all-orders" />}
+        element={<Navigate to="/admin/order/all-orders" />}
       />
     </Routes>
   );

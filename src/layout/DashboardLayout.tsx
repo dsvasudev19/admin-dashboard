@@ -1,14 +1,18 @@
 // import {a} from "react-router-dom";
 import {
   Bell,
+  BookUser,
   CircleUser,
+  Container,
   Home,
   LineChart,
   Menu,
   Package,
   Package2,
+  ScanEye,
   Search,
   ShoppingCart,
+  UserCog,
   Users,
 } from "lucide-react";
 
@@ -61,7 +65,21 @@ export function Dashboard() {
                 Dashboard
               </a>
               <a
-                href="/admin/orders/"
+                href="/admin/vendor/"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+              >
+                <UserCog className="h-4 w-4" />
+                Vendors
+              </a>
+              <a
+                href="/admin/store/"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+              >
+                <Container className="h-4 w-4" />
+                Stores
+              </a>
+              <a
+                href="/admin/order/"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
                 <ShoppingCart className="h-4 w-4" />
@@ -78,11 +96,25 @@ export function Dashboard() {
                 Products{" "}
               </a>
               <a
-                href="#"
+                href="/admin/user/"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
                 <Users className="h-4 w-4" />
                 Customers
+              </a>
+              <a
+                href="/admin/user/"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+              >
+                <ScanEye className="h-4 w-4" />
+                Review Management
+              </a>
+              <a
+                href="/admin/user/"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+              >
+                <BookUser className="h-4 w-4" />
+                Employee Management
               </a>
               <a
                 href="#"
@@ -90,7 +122,6 @@ export function Dashboard() {
               >
                 <LineChart className="h-4 w-4" />
                 Analytics
-                
               </a>
             </nav>
           </div>
@@ -172,7 +203,6 @@ export function Dashboard() {
                   <LineChart className="h-5 w-5" />
                   Analytics
                 </a>
-                
               </nav>
               <div className="mt-auto">
                 <Card>
@@ -221,9 +251,9 @@ export function Dashboard() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 w-[100%] overflow-hidden">
+        <div className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 w-[100%] overflow-scroll border-2 border-red-50 pb-5">
           <Outlet />
-        </main>
+        </div>
       </div>
     </div>
   );

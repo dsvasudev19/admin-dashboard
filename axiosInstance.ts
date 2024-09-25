@@ -20,7 +20,7 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-const getUserByTokenUsingRefreshToken = async (refreshToken) => {
+const getUserByTokenUsingRefreshToken = async (refreshToken:any) => {
   try {
     const res = await axiosInstance.post("/auth/user-by-token", {
       refreshToken,
