@@ -1,7 +1,6 @@
 import axios from "axios";
-import { error } from "console";
 
-export const axiosInstance = await axios.create({
+export const axiosInstance = axios.create({
   baseURL: "http://localhost:3000/api",
   withCredentials: true,
 });
@@ -20,7 +19,7 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-const getUserByTokenUsingRefreshToken = async (refreshToken:any) => {
+const getUserByTokenUsingRefreshToken = async (refreshToken: any) => {
   try {
     const res = await axiosInstance.post("/auth/user-by-token", {
       refreshToken,

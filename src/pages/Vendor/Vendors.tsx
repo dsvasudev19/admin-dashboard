@@ -1,4 +1,6 @@
-import { Badge } from "@/components/ui/badge";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+
 import {
   Table,
   TableBody,
@@ -7,7 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { axiosInstance } from "./../../../axiosInstance";
 
 const users = [
@@ -166,7 +168,7 @@ const users = [
 ];
 const Vendors = () => {
   const [vendors, setVendors] = useState([]);
-
+  console.log(vendors);
   const getAllVendors = async () => {
     try {
       const res = await axiosInstance.get("/admin/vendor");

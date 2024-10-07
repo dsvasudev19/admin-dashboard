@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Pencil, Trash } from "lucide-react";
-import React from "react";
+
 
 const stores = [
   {
